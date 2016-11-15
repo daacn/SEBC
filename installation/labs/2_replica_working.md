@@ -8,8 +8,8 @@ JDBC:
 
 wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.40.tar.gz
 tar -xzvf mysql-connector-java-5.1.40.tar.gz
-mkdir /usr/share/java
-sudo mv mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /usr/share/mysql-connector-java.jar 
+sudo mkdir /usr/share/java
+sudo mv mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /usr/share/java/mysql-connector-java.jar 
 echo "PATH=/usr/share/java/:$PATH" >> ~/.bashrc
 source ~/.bashrc
 
@@ -72,3 +72,7 @@ Master_SSL_Verify_Server_Cert: No
                Last_SQL_Error:
   Replicate_Ignore_Server_Ids:
              Master_Server_Id: 1
+
+create database cmf DEFAULT CHARACTER SET utf8;
+
+sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql cmf root password
