@@ -15,11 +15,23 @@
 
 # Setup replication
 ## On Master
+Update configuration (/etc/my.cnf.d/server.cnf), section [mariadb]:
+> bind-address = 0.0.0.0  
+> log-bin  
+> server_id=1  
+> log-basename=master1  
+  
+Restart MariaDB, then in SQL:  
 > GRANT REPLICATION SLAVE ON *.* TO 'replication_user' IDENTIFIED BY 'password';  
 > SET GLOBAL binlog_format = 'ROW';  
 > FLUSH TABLES WITH READ LOCK;  
 
 ## On Slave
+Update configuration (/etc/my.cnf.d/server.cnf), section [mariadb]:
+> bind-address = 0.0.0.0  
+> server_id=2   
+  
+Restart MariaDB, then in SQL:  
 > CHANGE MASTER TO  
 >   MASTER_HOST='ip-172-31-50-73.ec2.internal',  
 >   MASTER_USER='replication_user',  
