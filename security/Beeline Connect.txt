@@ -1,0 +1,1 @@
+!connect jdbc:hive2://localhost:10000/default;principal=hive/ip-172-31-50-73.ec2.internal@ARNREICH.COM

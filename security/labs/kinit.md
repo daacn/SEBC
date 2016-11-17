@@ -8,6 +8,7 @@
 > Password for daacn@ARNREICH.COM: ...   
 >   
 > klist
+
 ```
 Ticket cache: FILE:/tmp/krb5cc_793
 Default principal: daacn@ARNREICH.COM

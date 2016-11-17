@@ -1,2 +1,2 @@
-sudo useradd -u 793 daacn
-sudo groupmod -g 794 daacn 
+sudo useradd -u 1301 daacn
+sudo groupmod -g 1301 daacn 
