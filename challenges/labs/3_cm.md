@@ -40,7 +40,7 @@ drwxrwxr-x   - oozie   oozie               0 2016-11-18 09:51 /user/oozie
 drwxr-xr-x   - saxony  democratic          0 2016-11-18 10:02 /user/saxony
 ```
 
-# Hosts from API
+# Hosts through API
 ```JSON
 {
 items: [
