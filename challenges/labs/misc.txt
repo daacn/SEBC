@@ -1,0 +1,11 @@
+wget http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+sudo yum -y localinstall mysql57-community-release-el7-9.noarch.rpm
+sudo yum clean all
+sudo yum-config-manager --disable mysql57-community
+sudo yum-config-manager --enable mysql56-community
+
+wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.40.tar.gz
+tar zxvf mysql-connector-java-5.1.40.tar.gz
+sudo mkdir -p /usr/share/java/
+sudo cp mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /usr/share/java/mysql-connector-java.jar
+
